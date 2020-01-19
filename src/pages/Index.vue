@@ -1,30 +1,37 @@
 <template>
   <Layout>
-
-    <h1>Hello, world!</h1>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-    </p>
-
-    <p class="home-links">
-      <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
-      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-    </p>
-
+    <List :listData="$page.posts.edges"></List>
   </Layout>
 </template>
 
+<page-query>
+query {
+  posts: allPost {
+    edges {
+      node {
+        id
+        title
+        description
+        date (format: "D-MM-YYYY")
+        archives
+        path
+      }
+    }
+  }
+}
+</page-query>
+
 <script>
+import List from '~/components/List'
 export default {
   metaInfo: {
-    title: 'Hello, world!'
+    title: '首页'
+  },
+  components: {
+    List
   }
 }
 </script>
 
-<style>
-.home-links a {
-  margin-right: 1rem;
-}
+<style lang="stylus">
 </style>

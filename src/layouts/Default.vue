@@ -30,12 +30,12 @@ query {
 <style lang="stylus">
 @font-face {
   font-family: 'iconfont';  /* project id 1618118 */
-  src: url('//at.alicdn.com/t/font_1618118_5vz445ymv5f.eot');
-  src: url('//at.alicdn.com/t/font_1618118_5vz445ymv5f.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_1618118_5vz445ymv5f.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_1618118_5vz445ymv5f.woff') format('woff'),
-  url('//at.alicdn.com/t/font_1618118_5vz445ymv5f.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_1618118_5vz445ymv5f.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_1618118_2wyxq1au3l.eot');
+  src: url('//at.alicdn.com/t/font_1618118_2wyxq1au3l.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1618118_2wyxq1au3l.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1618118_2wyxq1au3l.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1618118_2wyxq1au3l.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1618118_2wyxq1au3l.svg#iconfont') format('svg');
 }
 .iconfont {
   font-family:"iconfont" !important;
@@ -50,22 +50,55 @@ query {
 .layout {
   /* max-width: 760px;
   margin: 0 auto; */
-  padding-left: 4rem;
-  padding-right: 4rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
 
   .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: .4rem;
-    padding: 1rem 0 .4rem;
+    padding: 1rem 0 2rem;
     
     .title {
+      position: relative;
       text-decoration: none;
-      background-color: #000;
-      color: #fff;
-      padding: .16rem .8rem;
+      color: #000;
+      padding: .2rem .4rem;
       font-size: .48rem;
+      font-weight: bold;
+      background-image: url('../assets/images/logo_bg.jpg');
+      background-repeat: no-repeat;
+      background-size: 130%;
+      background-position: 70%;
+
+      &::before {
+        position: absolute;
+        display: block;
+        content: "";
+        right : 0;
+        top: 0; 
+        width: 20%;
+        height: 0.04rem;
+        background: #000;
+        transition: all .4s;
+      }
+      
+      &::after {
+        position: absolute;
+        display: block;
+        content: "";
+        left  : 0;
+        bottom: 0; 
+        width: 20%;
+        height: 0.04rem;
+        background: #000;
+        transition: all .4s;
+      }
+
+      &:hover::before,
+      &:hover::after {
+        width: 100%;
+      }
     }
 
     .nav {
@@ -74,7 +107,8 @@ query {
       .nav__link {
         position: relative;
         display: block;
-        padding: 0 0.4rem;
+        padding: 0 0.2rem;
+        margin: 0 0.2rem
         text-decoration: none;
         color: #000;
         text-align: center;
@@ -97,6 +131,9 @@ query {
           transition: all .4s;
         }
         &:hover::after {
+          width: 100%;
+        }
+        &.active--exact::after {
           width: 100%;
         }
       }

@@ -7,7 +7,10 @@
 <script>
 export default {
   metaInfo: {
-    title: 'About us'
+    title: '分类/标签'
   }
 }
 </script>
+
+<style>
+</style>
