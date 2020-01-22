@@ -23,57 +23,73 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style scoped lang="stylus">
+#List {
+  width 16rem
+  margin 0 auto
+}
 .list-item {
-  margin-bottom: .8rem;
+  margin-bottom .8rem
 
   .list-title {
-    font-size: .4rem;
-    color: #000;
+    font-size .4rem
+    color $mainFontColor
+    transition all .3s
+
+    &:hover {
+      text-shadow 2px 2px 2px #59575770
+    }
   }
 
   .list-meta {
-    display: flex;
-    line-height: 1;
-    font-size: .24rem
-    color: #999;
-    margin: .2rem 0;
+    display flex
+    line-height 1
+    font-size .24rem
+    color $mateFontColor
+    margin .2rem 0
 
     .list-date {
-      padding-right: .4rem;
-      border-right: 1px solid #999;
+      padding-right .4rem
+      border-right 1px solid #999
 
       span {
-        vertical-align: middle;
+        vertical-align middle
       }
 
       .dateicon {
-        margin-right: .1rem;
+        margin-right .1rem
       }
     }
 
     .list-classify {
-      padding-left: .4rem;
+      padding-left .4rem
 
       span {
-        vertical-align: middle;
+        vertical-align middle
       }
 
       .classifyicon {
-        margin-right: .1rem;
+        margin-right .1rem
       }
     }
   }
 
   .list-desc {
-    padding-bottom: .3rem;
+    padding-bottom .3rem
   }
 
   .list-link {
-    padding: .12rem .6rem;
-    background: #000;
-    color: #fff;
-    font-size: .24rem;
+    padding .12rem .6rem
+    background #000
+    color #fff
+    font-size .24rem
+    transition all .3s
+    border 1px solid #000
+
+    &:hover {
+      background transparent
+      color #000
+    }
   }
 }
 </style>
