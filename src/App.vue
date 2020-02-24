@@ -31,10 +31,11 @@ export default {
 }
 
 #app {
-  background url('assets/images/bg2.jpg')
-  background-size cover
-  background-repeat no-repeat
-  background-position center
+  min-height 100%
+  background url($bgImg)
+  // background-size cover
+  // background-repeat no-repeat
+  // background-position center
   background-attachment fixed
 }
 </style>
