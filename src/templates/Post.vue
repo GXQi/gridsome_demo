@@ -132,9 +132,6 @@ export default {
 }
 
 .blog-content {
-  width $mainWidth
-  margin 0 auto
-
   .blog-title {
     text-align center  
   }
