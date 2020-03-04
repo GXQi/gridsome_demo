@@ -17,9 +17,7 @@
       <div class="slot-wrapper">
         <slot/>
       </div>
-      <!-- <footer class="footer    ">
-        copy
-      </footer> -->
+      <Footer v-if="showFooter"></Footer>
     </div>
     <slidebar></slidebar>
   </div>
@@ -34,10 +32,13 @@ query {
 </static-query>
 
 <script>
+import Footer from '~/components/Footer'
 import Slidebar from '~/components/Slidebar'
 export default {
+  props: ['showFooter'],
   components: {
-    Slidebar
+    Slidebar,
+    Footer
   }
 }
 </script>
@@ -143,7 +144,8 @@ export default {
     }
     
     .slot-wrapper {
-      width $mainWidth
+      max-width $mainWidth
+      width 100%
       margin 0 auto
     }
   }

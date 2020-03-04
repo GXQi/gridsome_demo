@@ -10,7 +10,7 @@
 <script>
 export default {
   metaInfo: {
-    title: 'About us'
+    title: '关于'
   }
 }
 </script>

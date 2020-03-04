@@ -1,6 +1,7 @@
 <template>
-  <Layout>
+  <Layout :showFooter="true">
     <List :listData="$page.posts.edges"></List>
+    <!-- <Footer></Footer> -->
   </Layout>
 </template>
 
@@ -23,12 +24,14 @@ query {
 
 <script>
 import List from '~/components/List'
+import Footer from '~/components/Footer'
 export default {
   metaInfo: {
     title: '首页'
   },
   components: {
-    List
+    List,
+    Footer
   }
 }
 </script>
