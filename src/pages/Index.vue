@@ -12,10 +12,14 @@ query {
       node {
         id
         title
-        description
+        excerpt
         date (format: "D-MM-YYYY")
-        archives
         path
+        tags {
+          id
+          path
+        }
+        cover_image (width: 100, height: 100, quality: 100)
       }
     }
   }

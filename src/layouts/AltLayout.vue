@@ -43,7 +43,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 .layout {
   display flex
   min-height 100%

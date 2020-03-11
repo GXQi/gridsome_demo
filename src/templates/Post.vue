@@ -129,6 +129,9 @@ export default {
     background-color #F3F3F3
     color #DD264F
   }
+  .img1 {
+    display block
+  }
 }
 
 .blog-content {

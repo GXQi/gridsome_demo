@@ -10,7 +10,13 @@
 <script>
 export default {
   metaInfo: {
-    title: 'About us'
+    title: 'Products', 
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'author', content: 'GXQi' },
+      { name: 'description', content: 'Gridsome Demo' },
+      { name: 'keywords', content: 'Gridsome' },
+    ]
   }
 }
 </script>

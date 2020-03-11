@@ -7,6 +7,8 @@ import '~/assets/reset.css'
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', AltLayout)
+  head.htmlAttrs = { lang: 'en' }
+  head.bodyAttrs = {class: 'body'}
   head.meta.push({
     name: 'keywords',
     content: 'HTML,CSS,XML,JavaScript'

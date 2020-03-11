@@ -6,11 +6,14 @@
       class="list-item"
     >
       <a :href="edge.node.path" class="list-title">{{edge.node.title}}</a>
+      <g-image :src="edge.node.cover_image" />
       <div class="list-meta">
         <p class="list-date"><span class="dateicon iconfont">&#xe672;</span><span class="mata-date-desc">发表于：</span><span class="mate-date">{{edge.node.date}}</span></p>
-        <p class="list-classify"><span class="classifyicon iconfont">&#xe67b;</span><span class="mata-classify-desc">分类于：</span><span class="mate-classify">{{edge.node.archives}}</span></p>
+        <p class="list-classify"><span class="classifyicon iconfont">&#xe67b;</span><span class="mata-classify-desc">分类于：</span>
+          <g-link class="mate-classify" :to="tag.path" v-for="tag in edge.node.tags" :key="tag.id">{{tag.id}} </g-link>
+        </p>
       </div>
-      <p class="list-desc">{{edge.node.description}}</p>
+      <p class="list-desc">{{edge.node.excerpt}}</p>
       <a class="list-link" :href="edge.node.path">阅读更多</a>
     </div>
   </div>

@@ -14,6 +14,13 @@ module.exports = {
       typeName: 'Post',
       path: 'blog/*.md',
       // route: '/blog/:slug'
+      refs: {
+        tags: {
+          typeName: 'Tag',
+          create: true,
+          route: '/tag/:id'
+        }
+      }
     }
   }],
   chainWebpack: config => {
