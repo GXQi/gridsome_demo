@@ -9,6 +9,7 @@ module.exports = {
   siteName: "GXQi's Blog",
   siteDescription: 'A simple blog designed with Gridsome',
   siteUrl: 'https://gxqi.github.io',
+  assetsPublicPath: './',
   plugins: [{
     use: '@gridsome/source-filesystem',
     options: {
