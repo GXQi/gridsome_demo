@@ -8,6 +8,7 @@ var path = require('path')
 module.exports = {
   siteName: "GXQi's Blog",
   siteDescription: 'A simple blog designed with Gridsome',
+  siteUrl: 'https://gxqi.github.io',
   plugins: [{
     use: '@gridsome/source-filesystem',
     options: {
