@@ -5,7 +5,7 @@ excerpt: 1.当swiper loop设为true时，同时你又改变了sliderPerview的�
 date: 2020-01-25
 time: 10:49
 tags: ['gridsome']
-cover_image: './images/first-blog.jpg'
+cover_image: './images/fifth-blog.jpg'
 ---
 
 #### 1.当swiper loop设为true时，同时你又改变了sliderPerview的值，这时候轮播，按prev按钮到第一个时，会出现空白页；

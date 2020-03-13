@@ -39,7 +39,7 @@ export default {
 
 <style scoped lang="stylus">
 #List {
-  width 16rem
+  width auto
   margin 0 auto
 }
 .pager {

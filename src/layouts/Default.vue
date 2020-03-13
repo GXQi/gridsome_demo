@@ -64,7 +64,6 @@ export default {
         padding .2rem .4rem
         font-size .48rem
         font-weight bold
-        // background-image url('../assets/images/logo_bg.jpg')
         background-repeat no-repeat
         background-size 130%
         background-position 70%
