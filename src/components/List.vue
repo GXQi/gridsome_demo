@@ -1,7 +1,7 @@
 <template>
   <div id="List">
     <div 
-      v-for="edge in listData" 
+      v-for="edge in listData.edges" 
       :key="edge.node.id"
       class="list-item"
     >
@@ -16,13 +16,24 @@
       <p class="list-desc">{{edge.node.excerpt}}</p>
       <a class="list-link" :href="edge.node.path">阅读更多</a>
     </div>
+
+    <!-- <div class="paginate">{{listData.pageInfo.totalPages}}
+      <span v-for="(page, index) in listData.pageInfo.totalPages" key="index">
+        {{index + 1}}
+      </span>
+    </div> -->
+    <Pager :info="listData.pageInfo" linkClass="pager"></Pager>
   </div>
 </template>
 
 <script>
+import {Pager} from 'gridsome'
 export default {
   name: "List",
   props: ['listData'],
+  components: {
+    Pager
+  }
 }
 </script>
 
@@ -30,6 +41,11 @@ export default {
 #List {
   width 16rem
   margin 0 auto
+}
+.pager {
+  font-size .4rem
+  letter-spacing .2rem
+  padding .2rem
 }
 .list-item {
   margin-bottom .8rem

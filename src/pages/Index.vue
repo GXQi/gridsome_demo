@@ -1,13 +1,17 @@
 <template>
   <Layout :showFooter="true">
-    <List :listData="$page.posts.edges"></List>
+    <List :listData="$page.posts"></List>
     <!-- <Footer></Footer> -->
   </Layout>
 </template>
 
 <page-query>
-query {
-  posts: allPost {
+query ($page: Int) {
+  posts: allPost (perPage: 2, page: $page) @paginate {
+    pageInfo {
+      totalPages
+      currentPage
+    }
     edges {
       node {
         id
