@@ -14,7 +14,7 @@
         </p>
       </div>
       <p class="list-desc">{{edge.node.excerpt}}</p>
-      <a class="list-link" :href="edge.node.path">阅读更多</a>
+      <g-link class="list-link" :to="edge.node.path">阅读更多</g-link>
     </div>
 
     <!-- <div class="paginate">{{listData.pageInfo.totalPages}}
