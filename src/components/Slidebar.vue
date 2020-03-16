@@ -9,10 +9,10 @@
       </div> 
     </div>
     <!-- 侧滑菜单容器 -->
-    <div class="slidebar-wrap-temp" :class="{active: isActive, close: isClose}"></div>
+    <!-- <div class="slidebar-wrap-temp" :class="{active: isActive, close: isClose}"></div> -->
     <div class="slidebar-wrap" :class="{active: isActive, close: isClose}">
       <!-- 可写为插槽形式，在调用该组件的地方定义容器中的具体内容，此处直接写为固定形式-->
-      <div class="slidebar-main">内容</div>
+      <slot class="slidebar-main">neirong</slot>
     </div>
   </div>
 </template>

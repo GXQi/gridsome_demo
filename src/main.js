@@ -14,3 +14,4 @@ export default function (Vue, { router, head, isClient }) {
     content: 'HTML,CSS,XML,JavaScript'
   })
 }
+

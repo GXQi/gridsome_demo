@@ -74,6 +74,8 @@ export default {
     padding .4rem
     box-shadow: 0 0 5px 0 rgba(38, 42, 48, .1);
     margin-bottom .4rem
+    margin-left .3rem
+    margin-right .3rem
 
     .article-cover {
       position relative
@@ -147,11 +149,11 @@ export default {
         display block
         width 3rem
         padding .1rem 0
-        background #000
+        background #222
         color #fff
         font-size .24rem
         transition all .3s
-        border 1px solid #000
+        border 1px solid #222
         margin 0 auto
         margin-top .4rem
         text-align center
@@ -159,7 +161,7 @@ export default {
 
         &:hover {
           background transparent
-          color #000
+          color #222
         }
       }
     }

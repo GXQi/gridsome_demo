@@ -19,6 +19,6 @@ export default {
 footer {
     text-align center
     letter-spacing 0.01rem
-    padding .4rem
+    padding .8rem 0 .4rem
 }
 </style>
