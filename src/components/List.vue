@@ -5,8 +5,11 @@
       :key="edge.node.id"
       class="list-item"
     >
-      <a :href="edge.node.path" class="list-title">{{edge.node.title}}</a>
-      <g-image :src="edge.node.cover_image" />
+      <div class="list-title-wrap">
+        <g-link class="list-title" :to="edge.node.path">{{edge.node.title}}</g-link>
+        <g-link class="list-link" :to="edge.node.path">阅读更多 >>></g-link>
+      </div>
+      <!-- <g-image :src="edge.node.cover_image" /> -->
       <div class="list-meta">
         <p class="list-date"><span class="dateicon iconfont">&#xe672;</span><span class="mata-date-desc">发表于：</span><span class="mate-date">{{edge.node.date}}</span></p>
         <p class="list-classify"><span class="classifyicon iconfont">&#xe67b;</span><span class="mata-classify-desc">分类于：</span>
@@ -14,7 +17,6 @@
         </p>
       </div>
       <p class="list-desc">{{edge.node.excerpt}}</p>
-      <g-link class="list-link" :to="edge.node.path">阅读更多</g-link>
     </div>
 
     <!-- <div class="paginate">{{listData.pageInfo.totalPages}}
@@ -22,7 +24,7 @@
         {{index + 1}}
       </span>
     </div> -->
-    <Pager :info="listData.pageInfo" linkClass="pager"></Pager>
+    <Pager :info="listData.pageInfo" linkClass="pager" class="paginate-style"></Pager>
   </div>
 </template>
 
@@ -39,24 +41,29 @@ export default {
 
 <style scoped lang="stylus">
 #List {
-  width auto
-  margin 0 auto
-}
-.pager {
-  font-size .4rem
-  letter-spacing .2rem
-  padding .2rem
+  margin 0 .3rem
+  box-sizing border-box
 }
 .list-item {
-  margin-bottom .8rem
+  margin-top .4rem
+  padding .4rem
+  box-shadow 0 0 5px 0 rgba(38,42,48,0.1)
 
-  .list-title {
-    font-size .4rem
-    color $mainFontColor
-    transition all .3s
+  .list-title-wrap {
+    display flex
+    justify-content space-between
+    align-items center
+    .list-title {
+      font-size .48rem
+      color $mainFontColor
+      transition all .3s
 
-    &:hover {
-      text-shadow 2px 2px 2px #59575770
+      &:hover {
+        text-shadow 2px 2px 2px #59575770
+      }
+    }
+    .list-link {
+      color #222
     }
   }
 
@@ -94,21 +101,30 @@ export default {
   }
 
   .list-desc {
-    padding-bottom .3rem
+    // padding-bottom .3rem
   }
+}
 
-  .list-link {
-    padding .12rem .6rem
-    background #000
+.pager {
+  display inline-block
+  margin 0 .1rem
+  line-height .6rem
+  width .6rem
+  height .6rem
+  background-color #f4f4f5
+  color #606266
+  font-weight bold
+  font-size .28rem
+  padding 0
+  text-align center
+  &.active {
+    background-color #409EFF
     color #fff
-    font-size .24rem
-    transition all .3s
-    border 1px solid #000
-
-    &:hover {
-      background transparent
-      color #000
-    }
   }
+}
+
+.paginate-style {
+  text-align center  
+  padding-top .8rem
 }
 </style>

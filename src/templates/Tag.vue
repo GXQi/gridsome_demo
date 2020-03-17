@@ -1,7 +1,9 @@
 <template>
   <Layout>
-    <h1># {{$page.tag.title}}</h1>
-    <List :listData="$page.tag.belongsTo"></List>
+    <div class="tag-content">
+      <h1 class="tag-title"># {{$page.tag.title}}</h1>
+      <List :listData="$page.tag.belongsTo"></List>
+    </div>
   </Layout>
 </template>
 
@@ -43,3 +45,17 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus" scoped>
+.tag-content {
+  width 100%
+  max-width $mainWidth_max
+  min-width $mainWidth_min
+  margin .6rem auto
+
+  .tag-title {
+    text-align center
+    font-size .72rem
+  }
+}
+</style>
