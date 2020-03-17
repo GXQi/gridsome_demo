@@ -78,8 +78,6 @@ export default {
 <style lang="stylus" scoped>
 >>> .vcomment {
   margin-top 1rem
-  margin-left .3rem
-  margin-right .3rem
   .vcomment-title {
     margin-bottom 1rem
     font-size .46rem
@@ -261,14 +259,11 @@ export default {
 }
 
 .article-content {
-  width 100%
-  max-width $mainWidth_max
-  min-width $mainWidth_min
-  margin auto
+  margin 0 .3rem
+  box-shadow 0 0 5px 0 rgba(38, 42, 48, .1)
+  padding .4rem
   .blog-content {
     padding-bottom 1rem
-    margin-left .3rem
-    margin-right .3rem
     .blog-title {
       text-align center  
     }
@@ -277,8 +272,6 @@ export default {
     user-select none
     padding-bottom 1rem
     border-bottom 1px solid #ccc
-    margin-left .3rem
-    margin-right .3rem
 
     p {
       text-align center
@@ -314,6 +307,7 @@ export default {
       @media screen and (max-width: 768px) {
         .qrcode {
           width 2.2rem
+          height 2.2rem
           margin 0 .2rem
         }
       }

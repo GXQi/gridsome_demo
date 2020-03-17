@@ -52,6 +52,8 @@ export default {
   max-width $mainWidth_max
   min-width $mainWidth_min
   margin .6rem auto
+  padding 0 .3rem
+  box-sizing border-box
 
   .tag-title {
     text-align center

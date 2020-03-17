@@ -66,16 +66,13 @@ export default {
 
 <style lang="stylus">
 .index-list {
-  width 100%
   max-width $mainWidth_max  
-  margin .6rem auto
+  margin 0 .3rem
   
   .article-card {
     padding .4rem
     box-shadow: 0 0 5px 0 rgba(38, 42, 48, .1);
     margin-bottom .4rem
-    margin-left .3rem
-    margin-right .3rem
 
     .article-cover {
       position relative

@@ -108,5 +108,6 @@ export default {
 <style lang="stylus" scoped>
 .tagCloud {
   text-align center
+  box-shadow 0 0 5px 0 rgba(38,42,48,0.1)
 }
 </style>

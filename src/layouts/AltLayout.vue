@@ -32,7 +32,9 @@
           </div>
         </div>
       </header>
-      <slot/>
+      <div class="layout-slot">
+        <slot class="slot"/>
+      </div>
       <!-- <Footer v-if="showFooter"></Footer> -->
       <Footer></Footer>
     </div>
@@ -72,6 +74,13 @@ export default {
   display flex
   min-height 100%
   height auto
+
+.layout-slot {
+  width 100%
+  max-width $mainWidth_max
+  min-width $mainWidth_min
+  margin .6rem auto
+}
 
   .layout-main {
     flex 1

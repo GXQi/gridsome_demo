@@ -41,7 +41,6 @@ export default {
 
 <style scoped lang="stylus">
 #List {
-  margin 0 .3rem
   box-sizing border-box
 }
 .list-item {
