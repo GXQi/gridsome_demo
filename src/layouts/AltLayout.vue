@@ -24,7 +24,7 @@
               </div>
             </div>
           </div>
-          <div class="m-menu-wrap" v-show="showMenu_m" :class="{activeMenu: isMenuActive, closeMenu: isMenuClose}">
+          <div class="m-menu-wrap" v-show="showMenu_m">
             <g-link class="nav__link" to="/"><i class="nav-icon iconfont">&#xe65d;</i>首页</g-link>
             <g-link class="nav__link" to="/archives/"><i class="nav-icon iconfont">&#xe662;</i>分类/标签</g-link>
             <g-link class="nav__link" to="/about/"><i class="nav-icon iconfont">&#xe66a;</i>关于</g-link>

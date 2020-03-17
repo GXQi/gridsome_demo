@@ -9,7 +9,7 @@
           </div>
           <div class="article-info">
             <div class="article-info-tag">
-              <p class="article-date"><span class="dateicon iconfont">&#xe672;</span><span class="mata-date-desc">发表于：</span><span class="mate-date">{{edge.node.date}}&nbsp;•&nbsp;</span></p>
+              <p class="article-date"><span class="dateicon iconfont">&#xe672;</span><span class="mata-date-desc">发表于：</span><span class="mate-date">{{edge.node.date}}&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
               <p class="list-classify"><span class="classifyicon iconfont">&#xe67b;</span><span class="mata-classify-desc">分类于：</span>
                 <g-link class="mate-classify" :to="tag.path" v-for="tag in edge.node.tags" :key="tag.id">{{tag.id}} </g-link>
               </p>
@@ -94,7 +94,7 @@ export default {
       }
       .article-title {
         position absolute
-        width auto
+        width 90%
         top 50%
         left 50%
         text-align center
@@ -121,6 +121,12 @@ export default {
           width 100%
         }
       }
+
+      @media screen and (max-width: 450px) {
+        .article-title {
+          font-size .6rem
+        }
+      }
     }
 
     .article-info {
@@ -133,12 +139,29 @@ export default {
           vertical-align middle
         }
       }
+      
+      @media screen and (max-width: 450px) {
+        .article-info-tag {
+          font-size .24rem
+          display block
+
+          span {
+            // display inline-block
+            margin-right .1rem
+          }
+        }
+      }
 
       .article-sub-desc {
         border-left .06rem solid #666
         padding-left .2rem
         margin-bottom .4rem
         color #666
+      }
+      @media screen and (max-width: 450px) {
+        .article-sub-desc {
+          font-size .24rem
+        }
       }
 
       hr {
@@ -162,6 +185,13 @@ export default {
         &:hover {
           background transparent
           color #222
+        }
+      }
+
+      @media screen and (max-width: 450px) {
+        .read-more {
+          width 2rem
+          padding .08rem 0
         }
       }
     }

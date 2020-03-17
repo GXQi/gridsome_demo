@@ -4,7 +4,7 @@
       <div class="blog-content">
         <h2 class="blog-title">{{$page.post.title}}</h2>
         <div class="content" v-html="$page.post.content" />
-        <span id="/blog/fifth-blog/" class="leancloud_visitors" data-flag-title="fifth blog">
+        <span :id="this.$page.post.title.replace(' ', '-')" class="leancloud_visitors" :data-flag-title="$page.post.title">
           <em class="post-meta-item-text">阅读量 </em>
           <i class="leancloud-visitors-count"></i>
         </span>
@@ -309,6 +309,13 @@ export default {
 
       .qrcode {
         margin 0 .4rem
+      }
+
+      @media screen and (max-width: 768px) {
+        .qrcode {
+          width 2.2rem
+          margin 0 .2rem
+        }
       }
     }
   }
