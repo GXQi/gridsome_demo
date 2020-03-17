@@ -94,7 +94,7 @@ export default {
       }
       .article-title {
         position absolute
-        width 90%
+        width auto
         top 50%
         left 50%
         text-align center
@@ -125,6 +125,11 @@ export default {
       @media screen and (max-width: 450px) {
         .article-title {
           font-size .6rem
+          width 90%
+          
+          &::after {
+            display none
+          }
         }
       }
     }

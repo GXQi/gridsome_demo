@@ -4,7 +4,7 @@
       <div class="blog-content">
         <h2 class="blog-title">{{$page.post.title}}</h2>
         <div class="content" v-html="$page.post.content" />
-        <span :id="this.$page.post.title.replace(' ', '-')" class="leancloud_visitors" :data-flag-title="$page.post.title">
+        <span :id="'/blog/' + this.$page.post.title.replace(' ', '-') + '/'" class="leancloud_visitors" :data-flag-title="$page.post.title">
           <em class="post-meta-item-text">阅读量 </em>
           <i class="leancloud-visitors-count"></i>
         </span>
