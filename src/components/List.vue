@@ -24,7 +24,7 @@
         {{index + 1}}
       </span>
     </div> -->
-    <Pager :info="listData.pageInfo" linkClass="pager" class="paginate-style"></Pager>
+    <!-- <Pager :info="listData.pageInfo" linkClass="pager" class="paginate-style"></Pager> -->
   </div>
 </template>
 
