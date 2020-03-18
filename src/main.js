@@ -12,6 +12,9 @@ export default function (Vue, { router, head, isClient }) {
   head.meta.push({
     name: 'keywords',
     content: 'HTML,CSS,XML,JavaScript'
+  }, {
+    name: 'viewport',
+    content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;'
   })
 }
 
