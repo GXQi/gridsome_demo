@@ -6,7 +6,7 @@
       class="list-item"
     >
       <div class="list-title-wrap">
-        <g-link class="list-title" :to="edge.node.path">{{edge.node.title}}</g-link>
+        <g-link class="list-title" :to="edge.node.path"><p v-html="edge.node.title"></p></g-link>
         <g-link class="list-link" :to="edge.node.path">阅读更多 >>></g-link>
       </div>
       <!-- <g-image :src="edge.node.cover_image" /> -->
