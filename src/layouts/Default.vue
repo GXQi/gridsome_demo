@@ -8,7 +8,7 @@
         </strong>
         <nav class="nav">
           <g-link class="nav__link" to="/"><i class="nav-icon iconfont">&#xe65d;</i>首页</g-link>
-          <g-link class="nav__link" to="/archives/"><i class="nav-icon iconfont">&#xe662;</i>分类/标签</g-link>
+          <g-link class="nav__link" to="/tags/"><i class="nav-icon iconfont">&#xe662;</i>分类/标签</g-link>
           <g-link class="nav__link" to="/about/"><i class="nav-icon iconfont">&#xe66a;</i>关于</g-link>
           <g-link class="nav__link" to="/search/"><i class="nav-icon iconfont">&#xe65f;</i>搜索</g-link>
         </nav>

@@ -12,7 +12,7 @@
     <div class="slidebar-wrap-temp" :class="{active: isActive, close: isClose}"></div>
     <div class="slidebar-wrap" :class="{active: isActive, close: isClose}">
       <!-- 可写为插槽形式，在调用该组件的地方定义容器中的具体内容，此处直接写为固定形式-->
-      <slot class="slidebar-main">neirong</slot>
+      <slot class="slidebar-main"></slot>
     </div>
   </div>
 </template>
@@ -125,6 +125,8 @@ export default {
     background $slidebarBg
     margin-right -($slidebarWidth)
     color #fff
+    padding 1rem
+    box-sizing border-box
   }
   .slidebar-wrap-temp {
     width $slidebarWidth

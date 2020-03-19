@@ -20,11 +20,15 @@ module.exports = {
         tags: {
           typeName: 'Tag',
           create: true,
-          route: '/tag/:id'
+          // route: '/tag/:id'
         }
       }
     }
   }],
+  templates: {
+    Post: '/blog/:title',
+    Tag: '/tag/:id'
+  },
   chainWebpack: config => {
     // 添加全局.styl文件
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']

@@ -26,6 +26,7 @@
         tags {
           id
           path
+          title
         }
       }
     }
@@ -54,15 +55,21 @@ export default {
     
  },
   methods: {
-    // 查询范围包括文章标题、内容
+    // 查询范围包括文章标题、内容、标签
     filterData (input) {
       this.posts = {edges: []}
       input = new RegExp(input, 'i') //忽略大小写
       var edges = this.$page.posts.edges;
       var arrResults = []
+      var tagsString = ''
+      var tagsArr = []
       for(var i = 0; i < edges.length; i++) {
-        console.log(edges[i].node.title.indexOf(input))
-        if(edges[i].node.title.search(input) !== -1 || edges[i].node.content.search(input) !== -1) {
+        for(var j = 0; j < edges[i].node.tags.length; j++) {
+          tagsString += edges[i].node.tags[j].title
+        }
+        console.log(tagsString)
+        // tagsArr = edges[i].node.tags
+        if(edges[i].node.title.search(input) !== -1 || edges[i].node.content.search(input) !== -1 || tagsString.search(input) !== -1) {
           this.posts.edges.push(edges[i])
         } else {
         }

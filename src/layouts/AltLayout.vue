@@ -8,7 +8,7 @@
           </strong>
           <nav class="nav">
             <g-link class="nav__link" to="/"><i class="nav-icon iconfont">&#xe65d;</i>首页</g-link>
-            <g-link class="nav__link" to="/archives/"><i class="nav-icon iconfont">&#xe662;</i>分类/标签</g-link>
+            <g-link class="nav__link" to="/tags/"><i class="nav-icon iconfont">&#xe662;</i>分类/标签</g-link>
             <g-link class="nav__link" to="/about/"><i class="nav-icon iconfont">&#xe66a;</i>关于</g-link>
             <g-link class="nav__link" to="/search/"><i class="nav-icon iconfont">&#xe65f;</i>搜索</g-link>
           </nav>
@@ -26,7 +26,7 @@
           </div>
           <div class="m-menu-wrap" v-show="showMenu_m">
             <g-link class="nav__link" to="/"><i class="nav-icon iconfont">&#xe65d;</i>首页</g-link>
-            <g-link class="nav__link" to="/archives/"><i class="nav-icon iconfont">&#xe662;</i>分类/标签</g-link>
+            <g-link class="nav__link" to="/tags/"><i class="nav-icon iconfont">&#xe662;</i>分类/标签</g-link>
             <g-link class="nav__link" to="/about/"><i class="nav-icon iconfont">&#xe66a;</i>关于</g-link>
             <g-link class="nav__link" to="/search/"><i class="nav-icon iconfont">&#xe65f;</i>搜索</g-link>
           </div>
@@ -38,7 +38,26 @@
       <!-- <Footer v-if="showFooter"></Footer> -->
       <Footer></Footer>
     </div>
-    <slidebar></slidebar>
+    <slidebar>
+      <div class="info-wrap">
+        <g-image class="avatar" src="../assets/images/avatar.jpg" width="80" height="80"></g-image>
+        <p class="name">GXQi</p>
+        <p class="desc">什么都不会的程序员!!!</p>
+        <div class="slide-menu-wrap">
+          <g-link to="/">
+            <p class="count">{{$static.allPost.totalCount}}</p> 
+            <p>文章</p>
+          </g-link>
+          <g-link to="/tags/">
+            <p class="count">{{$static.allTag.totalCount}}</p> 
+            <p>标签</p>
+          </g-link>
+        </div>
+        <div class="social-wrap">
+          <a href="https://github.com/GXQi"><i class="iconfont">&#xe61e;</i>GitHub</a>
+        </div>
+      </div>
+    </slidebar>
   </div>
 </template>
 
@@ -46,6 +65,12 @@
 query {
   metadata {
     siteName
+  }
+  allPost {
+    totalCount
+  }
+  allTag {
+    totalCount
   }
 }
 </static-query>
@@ -80,6 +105,76 @@ export default {
   max-width $mainWidth_max
   min-width $mainWidth_min
   margin .6rem auto
+}
+
+.info-wrap {
+  text-align center
+  line-height 1
+  
+  .avatar {
+    border-radius 50%
+    border .08rem solid #fff
+    margin-bottom .2rem
+  }
+  .name {
+    font-size .48rem
+    padding .2rem
+  }
+  .desc {
+    color #999
+    font-weight bold
+  }
+  .slide-menu-wrap {
+    display flex
+    justify-content center
+    margin .4rem 0
+    a {
+      color #999
+      font-weight bold
+      font-size .32rem
+      padding 0 .4rem
+      border-right 1px solid #555
+      transition all .4s
+
+      &:last-child {
+        border-right none
+      }
+      &:hover {
+        color #fff
+      }
+
+      .count {
+        font-size .44rem
+        margin-bottom .1rem
+      }
+    }
+  }
+  .social-wrap {
+    width 1.8rem
+    border 1px solid #fc6423
+    height .56rem
+    margin 0 auto
+    border-radius .1rem
+    a {
+      display flex
+      width 100%
+      height 100%
+      justify-content center
+      align-items center
+      color #fc6423
+      transition all .4s
+
+      i {
+        display block
+        margin-right .1rem
+      }
+
+      &:hover {
+        color #fff
+        background-color #fc6423
+      }
+    }
+  }
 }
 
   .layout-main {
