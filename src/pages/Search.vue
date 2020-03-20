@@ -67,7 +67,8 @@ export default {
         for(var j = 0; j < edges[i].node.tags.length; j++) {
           tagsString += edges[i].node.tags[j].title
         }
-        console.log(tagsString)
+        console.log(edges[i].node.content.replace(/<[^>]+>/g,"")) //去除标签
+        // console.log(tagsString)
         // tagsArr = edges[i].node.tags
         if(edges[i].node.title.search(input) !== -1 || edges[i].node.content.search(input) !== -1 || tagsString.search(input) !== -1) {
           this.posts.edges.push(edges[i])

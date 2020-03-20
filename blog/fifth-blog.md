@@ -1,7 +1,7 @@
 ---
 title: fifth blog
 author: GXQi
-excerpt: 当swiper loop设为true时，同时你又改变了sliderPerview的值，这时候轮播...
+excerpt: fifth excerpt...
 date: 2020-01-25
 time: 10:49
 tags: ['gridsome', 'tag1', 'tag2', 'tag3']
@@ -17,7 +17,3 @@ cover_image: './images/fifth-blog.jpg'
 我是fifth
 
 解决办法：初始化中设置observer为true;observerParent为true;
-<!-- <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582190492713&di=de4350296324f09bd6b081ec6832ebd2&imgtype=0&src=http%3A%2F%2Fimg.jk51.com%2Fimg_jk51%2F379132336.jpeg" width="50%" class="img1">
-<video src="/i/movie.ogg" controls="controls">
-your browser does not support the video tag
-</video> -->
